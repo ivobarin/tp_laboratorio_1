@@ -29,7 +29,7 @@ float calcularCredito (float precioIngresado)
 
 float calcularBitcoin(float precioIngresado)
 {
-	float valorBitcoin=4606954.55;
+	float valorBitcoin= 4606954.55;
 	float precioEnBitcoin;
 
 	precioEnBitcoin = precioIngresado/valorBitcoin;

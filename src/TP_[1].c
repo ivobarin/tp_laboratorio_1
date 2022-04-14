@@ -92,7 +92,7 @@ int main(void)
             }
             if (precioAerolineas<=0)
             {
-                printf("Error, debe ingresar el precio del vuelo Aerolineas primero para calcular ambos costos!\n\nDebe indicar el precio de ambos vuelos!// presione [2] en el menu de opciones para ingresar precio del vuelo\n");
+                printf("Error, debe ingresar el precio del vuelo Aerolineas primero para calcular ambos costos (el precio de Aerolineas no puede ser = 0)!\n\nDebe indicar el precio de ambos vuelos!// presione [2] en el menu de opciones para ingresar precio del vuelo\n");
                 break;
             }
             else
@@ -101,7 +101,7 @@ int main(void)
             }
             if (precioLatam<=0)
             {
-                printf("Error, debe ingresar el precio del vuelo Latam primero para calcular ambos costos!\n\nDebe indicar el precio de ambos vuelos!// presione [2] en el menu de opciones para ingresar precio del vuelo\n");
+                printf("Error, debe ingresar el precio del vuelo Latam primero para calcular ambos costos(el precio de Latam no puede ser = 0)!\n\nDebe indicar el precio de ambos vuelos!// presione [2] en el menu de opciones para ingresar precio del vuelo\n");
                 break;
             }
             else
@@ -131,8 +131,8 @@ int main(void)
         	else
         	{
         		printf("Kms Ingresados: %.2f Kms \n\n", kilometros);
-        		printf("Precio Latam: $%.2f\na) Precio con tarjeta de débito: $%.2f\nb) Precio con tarjeta de crédito: $%.2f\nc) Precio pagando con bitcoin: BTC%.4f\nd) Precio unitario: $%.2f\n", precioLatam, latamDebito, latamCredito, latamBTC, latamUnitario);
-        		printf("Precio Aerolineas Argentinas: $%.2f\na) Precio con tarjeta de débito: $%.2f\nb) Precio con tarjeta de crédito: $%.2f\nc) Precio pagando con bitcoin: BTC%.4f\nd) Precio unitario: $%.2f\n", precioAerolineas, aerolineasDebito, aerolineasCredito, aerolineasBTC, aerolineasUnitario);
+        		printf("Precio Latam: $%.2f\na) Precio con tarjeta de debito: $%.2f\nb) Precio con tarjeta de credito: $%.2f\nc) Precio pagando con bitcoin: %f BTC\nd) Precio unitario: $%.2f\n", precioLatam, latamDebito, latamCredito, latamBTC, latamUnitario);
+        		printf("Precio Aerolineas Argentinas: $%.2f\na) Precio con tarjeta de débito: $%.2f\nb) Precio con tarjeta de crédito: $%.2f\nc) Precio pagando con bitcoin: %f BTC\nd) Precio unitario: $%.2f\n", precioAerolineas, aerolineasDebito, aerolineasCredito, aerolineasBTC, aerolineasUnitario);
         		printf("La diferencia de precio es de $%.2f\n\n", diferenciaPrecio);
         	}
         	break;
@@ -156,7 +156,7 @@ int main(void)
         		aerolineasUnitario = calcularPrecioUnitario(precioAerolineas,kilometros);
         		latamUnitario = calcularPrecioUnitario (precioLatam,kilometros);
         		diferenciaPrecio = precioLatam - precioAerolineas;
-        		printf("\nKms Ingresados: %.2f Kms \n\nPrecio Aerolineas Argentinas: $%.2f\na) Precio con tarjeta de débito: $%.2f \nb) Precio con tarjeta de crédito: $%.2f \nc) Precio pagando con bitcoin: %.4f BTC \nd) Precio unitario: $%.2f \n\nPrecio Latam: $%.2f\na) Precio con tarjeta de débito: $%.2f \nb) Precio con tarjeta de crédito: $%.2f \nc) Precio pagando con bitcoin: %.4f BTC \nd) Precio unitario: $%.2f \n\nLa diferencia de precio es de $%.2f\n\n",kilometros, precioAerolineas, aerolineasDebito,aerolineasCredito,aerolineasBTC, aerolineasUnitario, precioLatam, latamDebito, latamCredito, latamBTC, latamUnitario, diferenciaPrecio);
+        		printf("\nKms Ingresados: %.2f Kms \n\nPrecio Aerolineas Argentinas: $%.2f\na) Precio con tarjeta de debito: $%.2f \nb) Precio con tarjeta de credito: $%.2f \nc) Precio pagando con bitcoin: %f BTC \nd) Precio unitario: $%.2f \n\nPrecio Latam: $%.2f\na) Precio con tarjeta de debito: $%.2f \nb) Precio con tarjeta de credito: $%.2f \nc) Precio pagando con bitcoin: %f BTC \nd) Precio unitario: $%.2f \n\nLa diferencia de precio es de $%.2f\n\n",kilometros, precioAerolineas, aerolineasDebito,aerolineasCredito,aerolineasBTC, aerolineasUnitario, precioLatam, latamDebito, latamCredito, latamBTC, latamUnitario, diferenciaPrecio);
         		break;
         	}
 			break;
